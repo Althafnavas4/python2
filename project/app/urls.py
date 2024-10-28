@@ -13,4 +13,6 @@ urlpatterns=[
     path('demo',views.demo),
     path('display',views.display),
     path('user_reg',views.user_reg),
+    path('edit_user/<id>',views.edit_user),
+    path('delete_user/<id>',views.delete_user)
 ]
