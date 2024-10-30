@@ -16,22 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from app import views
+# from app import views
 
-urlpatterns = [
-    
-    # path('admin/', admin.site.urls),
-    # path('',views.fun1),
-    # path('fun2/<int:a>/<int:b>',views.fun2),
+urlpatterns=[
+    path('admin/', admin.site.urls),
+    path("",include("app.urls")),
+    # path('demo/',views.fun1),
+    # path('fun2/ <a>',views.fun2),
     # path('task/<int:salary>/<int:year>',views.task),
-    # path('task1/<city>',views.task1),
+    # path('task1/<str:city>',views.task1),
     # path('task2/<int:num>',views.task2),
-    # path('task3/<day>',views.task3),
+    # path('task3/<int:day>',views.task3),
     # path('task4/<int:cost>',views.task4),
     # path('task5/<int:unit>',views.task5),
-
-    path('admin/', admin.site.urls),
-    path('',include('app.urls')),
-#     path('',views.fun1),
-#     path('fun2/<int:a>/<int:b>',views.fun2),
 ]
